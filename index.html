@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f0e8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
+    <meta name="description" content="저희 두 사람의 결혼식에 초대합니다." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wedding Invitation" />
+    <meta property="og:description" content="저희 두 사람의 결혼식에 초대합니다." />
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <main class="invitation" id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-kicker">Wedding Invitation</div>
+        <div class="hero-date" data-text="date.shortEnglish">May 15, 2027</div>
+
+        <figure class="hero-photo-wrap">
+          <img
+            class="hero-photo"
+            data-image="cover"
+            src="./assets/cover-placeholder.svg"
+            alt="신랑 신부 대표 사진"
+          />
+          <figcaption class="hero-caption">Together, with our families</figcaption>
+        </figure>
+
+        <div class="hero-names" id="hero-title">
+          <span data-text="groom.fullName">안종봉</span>
+          <span class="hero-dot" aria-hidden="true">·</span>
+          <span data-text="bride.fullName">신부 이름</span>
+        </div>
+        <p class="hero-meta">
+          <span data-text="date.korean">2027년 5월 15일 토요일 오후 1시</span><br />
+          <span data-text="venue.name">예식장 이름</span>
+        </p>
+        <div class="scroll-cue" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="invitation-title">
+        <p class="section-en">Invitation</p>
+        <h2 id="invitation-title">소중한 분들을 초대합니다</h2>
+        <div class="ornament" aria-hidden="true">◇</div>
+        <p class="invitation-copy" data-text="invitation.message">
+          서로의 하루를 아끼며 걸어온 두 사람이<br />
+          이제 같은 곳을 바라보며 새로운 길을 시작합니다.<br /><br />
+          귀한 걸음으로 함께하시어<br />
+          따뜻한 축복을 나누어 주시면 감사하겠습니다.
+        </p>
+
+        <div class="family-lines" aria-label="신랑 신부 가족 관계">
+          <p>
+            <span data-text="groom.father">신랑 아버님</span>
+            <span class="family-separator">·</span>
+            <span data-text="groom.mother">신랑 어머님</span>
+            <span class="family-relation">의 <span data-text="groom.order">아들</span></span>
+            <strong data-text="groom.fullName">안종봉</strong>
+          </p>
+          <p>
+            <span data-text="bride.father">신부 아버님</span>
+            <span class="family-separator">·</span>
+            <span data-text="bride.mother">신부 어머님</span>
+            <span class="family-relation">의 <span data-text="bride.order">딸</span></span>
+            <strong data-text="bride.fullName">김다솔</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="section calendar-section reveal" aria-labelledby="calendar-title">
+        <p class="section-en">The Wedding Day</p>
+        <h2 id="calendar-title" data-text="date.korean">2027년 5월 15일 토요일 오후 1시</h2>
+        <p class="venue-line" data-text="venue.fullName">예식장 이름 · 홀 이름</p>
+
+        <div class="calendar" aria-label="예식일 달력">
+          <div class="calendar-heading">
+            <span data-calendar-year>2027</span>
+            <strong data-calendar-month>05</strong>
+          </div>
+          <div class="calendar-grid calendar-weekdays" aria-hidden="true">
+            <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+          </div>
+          <div class="calendar-grid calendar-days" data-calendar-days></div>
+        </div>
+
+        <div class="countdown" aria-label="예식일까지 남은 시간">
+          <div><strong data-count="days">000</strong><span>Days</span></div>
+          <i aria-hidden="true">:</i>
+          <div><strong data-count="hours">00</strong><span>Hour</span></div>
+          <i aria-hidden="true">:</i>
+          <div><strong data-count="minutes">00</strong><span>Min</span></div>
+          <i aria-hidden="true">:</i>
+          <div><strong data-count="seconds">00</strong><span>Sec</span></div>
+        </div>
+        <p class="countdown-copy" data-countdown-copy>
+          두 사람의 결혼식이 <strong>000일</strong> 남았습니다.
+        </p>
+      </section>
+
+      <section class="section gallery-section reveal" aria-labelledby="gallery-title">
+        <p class="section-en">Gallery</p>
+        <h2 id="gallery-title">우리의 순간</h2>
+        <div class="gallery" data-gallery></div>
+        <p class="gallery-hint">사진을 누르면 크게 볼 수 있습니다.</p>
+      </section>
+
+      <section class="section location-section reveal" aria-labelledby="location-title">
+        <p class="section-en">Location</p>
+        <h2 id="location-title">오시는 길</h2>
+
+        <div class="venue-card">
+          <span class="venue-card-label">PLACE</span>
+          <strong data-text="venue.fullName">예식장 이름 · 홀 이름</strong>
+          <p data-text="venue.address">서울특별시 주소를 입력해 주세요.</p>
+          <p data-text="venue.tel">Tel. 02-000-0000</p>
+        </div>
+
+        <figure class="venue-map" data-venue-map hidden>
+          <img data-image="map" src="" alt="" loading="lazy" decoding="async" />
+        </figure>
+
+        <div class="map-actions" aria-label="지도 앱으로 위치 열기">
+          <a class="button button-outline" data-link="naverMap" href="https://map.naver.com/" target="_blank" rel="noreferrer">네이버 지도</a>
+          <a class="button button-outline" data-link="kakaoMap" href="https://map.kakao.com/" target="_blank" rel="noreferrer">카카오맵</a>
+          <a class="button button-outline" data-link="tmap" href="https://www.tmap.co.kr/" target="_blank" rel="noreferrer">티맵</a>
+        </div>
+
+        <div class="travel-list" data-travel-list></div>
+      </section>
+
+      <section class="section contact-section reveal" aria-labelledby="contact-title">
+        <p class="section-en">Contact</p>
+        <h2 id="contact-title">연락하기</h2>
+        <p class="section-description">축하의 마음을 전하실 분께 연락해 주세요.</p>
+        <div class="contact-columns">
+          <div class="contact-side">
+            <h3>신랑측</h3>
+            <div data-contacts="groom"></div>
+          </div>
+          <div class="contact-side">
+            <h3>신부측</h3>
+            <div data-contacts="bride"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section account-section reveal" aria-labelledby="account-title">
+        <p class="section-en">For Your Heart</p>
+        <h2 id="account-title">마음 전하실 곳</h2>
+        <p class="section-description">
+          참석이 어려우신 분들을 위해 계좌번호를 안내드립니다.<br />
+          너른 마음으로 양해 부탁드립니다.
+        </p>
+        <div class="account-groups">
+          <details>
+            <summary>신랑측 계좌번호 <span aria-hidden="true">＋</span></summary>
+            <div class="account-list" data-accounts="groom"></div>
+          </details>
+          <details>
+            <summary>신부측 계좌번호 <span aria-hidden="true">＋</span></summary>
+            <div class="account-list" data-accounts="bride"></div>
+          </details>
+        </div>
+      </section>
+
+      <footer class="footer reveal">
+        <p class="footer-script">Thank you</p>
+        <p class="footer-names">
+          <span data-text="groom.firstName">종봉</span>
+          <span aria-hidden="true">♡</span>
+          <span data-text="bride.firstName">이름</span>
+        </p>
+        <div class="share-actions">
+          <button class="button button-solid" type="button" data-share>초대장 공유하기</button>
+          <button class="button button-text" type="button" data-copy-link>링크 복사</button>
+        </div>
+      </footer>
+    </main>
+
+    <dialog class="lightbox" data-lightbox aria-label="사진 크게 보기">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="사진 닫기">닫기</button>
+      <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="이전 사진">이전</button>
+      <figure>
+        <img data-lightbox-image src="" alt="" />
+        <figcaption data-lightbox-caption></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="다음 사진">다음</button>
+    </dialog>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+    <script src="./wedding-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
