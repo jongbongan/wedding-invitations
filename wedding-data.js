@@ -91,6 +91,15 @@ window.WEDDING_DATA = {
     },
   },
 
+  // 배경음악. 브라우저 정책상 페이지를 처음 터치/클릭한 순간부터 재생됩니다.
+  music: {
+    src: "./bgm/bgm-web.mp3",
+    autoplay: true, // false로 두면 ♪ 버튼을 눌러야만 재생됩니다.
+    volume: 0.6, // 0 ~ 1
+    // 출처 표기가 필요하면 아래처럼 넣으면 푸터에 아주 작게 표시됩니다. (현재는 표시 안 함)
+    // credit: { text: "BGM · hae_mosu", url: "https://m.blog.naver.com/hae_mosu/224214506343" },
+  },
+
   contacts: {
     groom: [
       { relation: "신랑", name: "안종봉", phone: "010-3757-8409" },

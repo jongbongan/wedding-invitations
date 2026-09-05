@@ -2,3 +2,5 @@
 jpgs/
 _contact.jpg
 .DS_Store
+# 원본 음원(용량 큼) — 재인코딩한 bgm/bgm-web.mp3 만 올립니다
+bgm/bgm.mp3

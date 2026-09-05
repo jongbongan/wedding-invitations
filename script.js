@@ -393,6 +393,72 @@
     $$(".reveal").forEach((element) => observer.observe(element));
   };
 
+  const setupMusic = () => {
+    const music = data.music;
+    const audio = $("[data-bgm]");
+    const toggle = $("[data-bgm-toggle]");
+    if (!music || !music.src || !audio || !toggle) return;
+
+    audio.src = music.src;
+    audio.volume = typeof music.volume === "number" ? Math.min(1, Math.max(0, music.volume)) : 0.6;
+    toggle.hidden = false;
+
+    const setState = (playing) => {
+      toggle.classList.toggle("is-playing", playing);
+      toggle.setAttribute("aria-pressed", String(playing));
+      toggle.setAttribute("aria-label", playing ? "배경음악 끄기" : "배경음악 켜기");
+    };
+
+    const play = () => audio.play().then(() => setState(true)).catch(() => setState(false));
+    const pause = () => {
+      audio.pause();
+      setState(false);
+    };
+
+    let userStopped = false;
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (audio.paused) {
+        userStopped = false;
+        play();
+      } else {
+        userStopped = true;
+        pause();
+      }
+    });
+
+    // 브라우저는 사용자의 첫 상호작용 이후에만 소리를 허용하므로, 첫 터치/클릭/키 입력에서 재생을 시작합니다.
+    if (music.autoplay !== false) {
+      const startOnGesture = () => {
+        if (userStopped || !audio.paused) return;
+        play();
+      };
+      ["pointerdown", "touchstart", "keydown"].forEach((type) =>
+        document.addEventListener(type, startOnGesture, { once: true, passive: true }),
+      );
+      // 이미 허용된 환경(자주 방문한 사이트 등)에서는 바로 재생을 시도합니다.
+      play();
+    }
+
+    // 다른 앱/탭으로 갔다 돌아오면 이어서 재생
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        if (!audio.paused) audio.pause();
+      } else if (!userStopped && audio.paused && toggle.classList.contains("is-playing")) {
+        play();
+      }
+    });
+
+    const credit = $("[data-bgm-credit]");
+    if (credit && music.credit && music.credit.text) {
+      const link = credit.querySelector("a");
+      link.textContent = music.credit.text;
+      if (music.credit.url) link.href = music.credit.url;
+      else link.removeAttribute("href");
+      credit.hidden = false;
+    }
+  };
+
   setDocumentMeta();
   renderText();
   renderCalendar();
@@ -404,6 +470,7 @@
   bindShare();
   bindDetails();
   observeSections();
+  setupMusic();
   updateCountdown();
   window.setInterval(updateCountdown, 1000);
 })();
