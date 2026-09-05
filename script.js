@@ -135,9 +135,20 @@
     data.venue.travel.forEach((item) => {
       const article = document.createElement("article");
       const title = document.createElement("h3");
-      const description = document.createElement("p");
+      const description = document.createElement("div");
+      description.className = "travel-lines";
       title.textContent = item.title;
-      description.textContent = item.description;
+      const lines = Array.isArray(item.description)
+        ? item.description
+        : String(item.description).split("\n");
+      lines
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .forEach((line) => {
+          const paragraph = document.createElement("p");
+          paragraph.textContent = line;
+          description.append(paragraph);
+        });
       article.append(title, description);
       fragment.append(article);
     });

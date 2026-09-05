@@ -524,7 +524,7 @@ img {
 }
 
 .venue-map {
-  margin: 20px 0 0;
+  margin: 20px 0 18px; /* 위 20px, 아래(지도 버튼과의 간격) 18px */
   border-radius: 16px;
   overflow: hidden;
   background: #fff;
@@ -595,7 +595,11 @@ img {
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.7;
-  white-space: pre-line; /* description의 \n을 줄바꿈으로 표시 */
+}
+
+.travel-lines {
+  display: grid;
+  gap: 9px; /* 안내 문장 사이 여백 */
 }
 
 .contact-section {

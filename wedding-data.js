@@ -15,7 +15,7 @@ window.WEDDING_DATA = {
 
   groom: {
     fullName: "안종봉",
-    firstName: "종봉",
+    firstName: "안종봉",
     father: "안춘기",
     mother: "이정순",
     order: "장남",
@@ -23,7 +23,7 @@ window.WEDDING_DATA = {
 
   bride: {
     fullName: "김다솔",
-    firstName: "다솔",
+    firstName: "김다솔",
     father: "김종희",
     mother: "유연화",
     order: "장녀",
@@ -45,16 +45,23 @@ window.WEDDING_DATA = {
       kakaoMap: "https://kko.to/AkKE0iCLp6",
       tmap: "https://tmap.life/2e5510e3",
     },
-        travel: [
+        // description은 문장 하나당 한 줄씩 배열로 적으면 화면에서 문장마다 줄이 나뉘고 여백이 들어갑니다.
+    travel: [
       {
         title: "대중교통",
-        description:
-          "2호선 서울대입구역 3번 출구에서 5511번, 5513번 버스 승차\n2호선 낙성대역 4번 출구에서 관악02-1번 버스 승차\n신림선 관악산역 1번 출구에서 5516번 버스 승차",
+        description: [
+          "2호선 서울대입구역 3번 출구에서 5511번, 5513번 버스 승차",
+          "2호선 낙성대역 4번 출구에서 관악02-1번 버스 승차",
+          "신림선 관악산역 1번 출구에서 5516번 버스 승차",
+        ],
       },
       {
         title: "자가용",
-        description:
-          "정문 입차 시 계속 직진 후 신소재연구소 지나 제2공학관 앞 주차요원 유도에 따라 주차\n후문 입차 시 관악사 삼거리에서 좌회전 후 직진, 제2공학관 앞 주차요원 유도에 따라 주차\n출차 시 직원에게 '2시간 무료 주차권' 수령 후 출차",
+        description: [
+          "정문 입차 시 계속 직진 후 신소재연구소 지나 제2공학관 앞 주차요원 유도에 따라 주차",
+          "후문 입차 시 관악사 삼거리에서 좌회전 후 직진, 제2공학관 앞 주차요원 유도에 따라 주차",
+          "출차 시 직원에게 '2시간 무료 주차권' 수령 후 출차",
+        ],
       },
     ],
   },
@@ -105,7 +112,7 @@ window.WEDDING_DATA = {
     ],
     bride: [
       { relation: "신부", name: "김다솔", bank: "토스뱅크", number: "1001-7649-8103" },
-      { relation: "아버지", name: "김종희", bank: "은행명", number: "미정" },
+      { relation: "아버지", name: "김종희", bank: "농협", number: "351-1043-4978-93" },
       { relation: "어머니", name: "유연화", bank: "기업", number: "5290-4341-301019" },
     ],
   },
