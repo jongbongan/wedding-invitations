@@ -489,7 +489,6 @@ img {
   overflow: hidden;
   border: 1px solid var(--line);
   background:
-    linear-gradient(130deg, transparent 0 48%, rgba(155, 112, 104, 0.08) 48% 49%, transparent 49% 100%),
     linear-gradient(45deg, rgba(166, 138, 102, 0.07), transparent 55%),
     var(--white);
 }
