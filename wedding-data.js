@@ -42,7 +42,7 @@ window.WEDDING_DATA = {
     tel: "Tel. 02-875-7761",
     links: {
       naverMap: "https://naver.me/5N15n4Vu",
-      kakaoMap: "https://kko.to/AkKE0iCLp6",
+      kakaoMap: "https://place.map.kakao.com/1408612060",
       tmap: "https://tmap.life/2e5510e3",
     },
         // description은 문장 하나당 한 줄씩 배열로 적으면 화면에서 문장마다 줄이 나뉘고 여백이 들어갑니다.
